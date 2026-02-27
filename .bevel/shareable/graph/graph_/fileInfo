@@ -1,0 +1,32 @@
+{
+  "fileInfos" : [ {
+    "path" : "bluetooth_led_controller.py",
+    "modificationInfo" : {
+      "contentHash" : -198019800,
+      "lastModified" : 1771002722309
+    },
+    "linesOfCode" : 20
+  }, {
+    "path" : "main.c",
+    "modificationInfo" : {
+      "contentHash" : 2117483100,
+      "lastModified" : 1772153666519
+    },
+    "linesOfCode" : 281
+  }, {
+    "path" : "tiva_bt_gui.py",
+    "modificationInfo" : {
+      "contentHash" : 1385701612,
+      "lastModified" : 1771970227290
+    },
+    "linesOfCode" : 420
+  }, {
+    "path" : "tm4c123gh6pm_startup_ccs.c",
+    "modificationInfo" : {
+      "contentHash" : -1353737689,
+      "lastModified" : 1771002298179
+    },
+    "linesOfCode" : 300
+  } ],
+  "appVersion" : "1.3.0"
+}

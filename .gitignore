@@ -1,0 +1,14 @@
+# Local tooling
+.bevel/do_not_share/
+
+# IDE and OS
+.vscode/
+
+# Build outputs
+Debug/
+
+# Local runtime settings
+tiva_bt_gui_settings.json
+
+# Backup files
+BACKUPS/
