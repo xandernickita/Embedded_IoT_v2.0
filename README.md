@@ -104,7 +104,28 @@ main()
 
 ---
 
-## Command Protocol
+## System Flowcharts
+
+### Firmware — ISR Architecture & Peripheral Drivers
+> Covers interrupt service routines (UART1, GPIOD, SysTick, WDT0), DHT11 1-wire bit-bang protocol, WS2812B 800kHz bit-bang driver, and the 7-state motion LED FSM.
+
+![Firmware ISR Architecture & Peripheral Drivers](docs/Firmware_ISR.png)
+
+---
+
+### GUI Application Flow
+> Covers connection management with 3-second timeout watchdog, daemon reader thread, 50ms queue drain and message parser, periodic timers (STATE poll + software watchdog), and user control event dispatch.
+
+![GUI Application Flow](docs/GUI_Application.png)
+
+---
+
+### Full System Architecture
+> End-to-end view across all four layers: Physical Hardware → TM4C Firmware → Bluetooth Transport → Python GUI, with every data and signal path traced between them.
+
+<img src="docs/Full_System_Spec.png" alt="Full System Architecture" width="900"/>
+
+---
 
 All communication is ASCII over Bluetooth UART. Commands are `\n`-terminated. Responses are `\r\n`-terminated.
 
@@ -219,12 +240,16 @@ On re-trigger while strip is on: timer silently resets to 30 seconds, brightness
 
 ```
 /
-├── main.c                    # TM4C123G firmware (v0.5)
-├── tiva_bt_gui.py            # Python desktop GUI (v2.0)
+├── main.c                        # TM4C123G firmware (v0.5)
+├── tiva_bt_gui.py                # Python desktop GUI (v2.0)
 ├── tm4c123gh6pm_startup_ccs.c
 ├── tm4c123gh6pm.cmd
 ├── targetConfigs/
 │   └── Tiva TM4C123GH6PM.ccxml
+├── docs/
+│   ├── Firmware_ISR.png          # ISR architecture & peripheral driver flowchart
+│   ├── GUI_Application.png       # GUI application flowchart
+│   └── Full_System_Spec.png      # Full system architecture flowchart
 └── README.md
 ```
 
