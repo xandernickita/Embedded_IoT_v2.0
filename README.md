@@ -2,7 +2,7 @@
 
 A bare-metal embedded IoT system built on the **Texas Instruments TM4C123G LaunchPad**. Sensor data is read directly from hardware peripherals, processed in firmware written entirely in C without any Arduino or RTOS libraries, and transmitted wirelessly over Bluetooth Classic (UART) to a Python desktop GUI and optionally an Android application.
 
-The primary goal of this project is to demonstrate practical understanding of UART-based IoT communication, embedded peripheral integration, and cross-platform Bluetooth application development” all without relying on high-level abstraction layers.
+The primary goal of this project is to demonstrate practical understanding of UART-based IoT communication, embedded peripheral integration, and cross-platform Bluetooth application development â€” all without relying on high-level abstraction layers.
 
 ---
 
@@ -77,20 +77,6 @@ HC-05:     VCCâ†’5V    GNDâ†’GND  TXâ†’PB0    RXâ†’PB1
 **SDK:** TivaWare DriverLib  
 **Optimization:** `-O2` (required for WS2812B bit-bang timing)  
 **Version:** 0.5
-```
-
-## System Flowcharts
-
-### Firmware - Initialization & Main Loop
-![ISR Init & Main Loop](docs/Firmware_ISR.png)
-
-### GUI Application Flow
-![GUI Application](docs/GUI_Application.png)
-
-### Full System Architecture
-![Full System Flowchart](docs/Full_System_Spec.png)
-
----
 
 ### Architecture
 
